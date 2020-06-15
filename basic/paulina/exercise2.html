@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        li {
+            background-color: rgb(88, 174, 202);
+            list-style-type: none;
+            color: rgb(41, 47, 104);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animate">
+        <h1>Custom Animation</h1>
+    </div>
+    <ul>
+        <li>remove item</li>
+        <li>remove item</li>
+        <li>remove item</li>
+        <li>remove item</li>
+        <li>remove item</li>
+        <li>
+            <input type="text" value="First Input Box" />
+        </li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            $('li').dblclick(function() {
+                $(this).animate({
+                    opacity: 0.0,
+                    paddingLeft: '+=80'
+                }, 1000, function() {
+                    $(this).remove();
+                });
+            });
+            $('input').on('dblclick', function() {
+                $(this).animate({
+                    opacity: 0.0,
+                    paddingLeft: '+=80'
+                }, 1000, function() {
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+Fluid and responsive user experience is expected from every single user these days. This is the part where jQuery animations can help us. Create jQuery TODO program, which will list 5 TODO tasks vertically and while clicking on some task it will disappear
+slowly as well as slide to the right while disappearing. BONUS: Give the user even more functionality by providing an input field where the user can create new TODO tasks (recommended way of showing a new task in the list is by using some animation effect
+of your choice)
